@@ -24,3 +24,8 @@ version: 0.1.0
 appVersion: "1.16.0"
 
 icon: "https://d2908q01vomqb2.cloudfront.net/d435a6cdd786300dff204ee7c2ef942d3e9034e2/2020/01/23/logo.png"
+dependencies:
+ - name: grafana
+   version: 6.21.6
+   repository: file://../common/grafana
+   condition: grafana.enabled
