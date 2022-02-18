@@ -89,7 +89,7 @@ volumes:
       claimName: volume
 
 volumeMounts:
-  - mountPath: /home/ruan
+  - mountPath: /home/gabriel
     name: volume
 
 autoscaling:
