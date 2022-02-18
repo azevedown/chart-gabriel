@@ -38,6 +38,14 @@ questions:
     required: true
     label: Size
     group: "PVC Settings"
+- variable: service.port
+  default: 80
+  required: true
+  type: int
+  show_subquestion_if: true
+  group: "Port Settings"
+  label: Port
+
 - variable: autoscaling.enabled
   default: false
   required: false
