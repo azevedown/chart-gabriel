@@ -40,6 +40,16 @@ service:
   type: ClusterIP
   port: 80
 
+livenessProbe:
+ httpGet:
+   path: /
+   port: http
+
+readinessProbe:
+ httpGet:
+   path: /
+   port: http
+
 ingress:
   enabled: false
   className: ""
@@ -67,6 +77,20 @@ resources: {}
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
+
+persistence:
+  enabled: true
+  size: 1Gi
+  name: volume
+
+volumes:
+  - name: volume
+    persistentVolumeClaim:
+      claimName: volume
+
+volumeMounts:
+  - mountPath: /home/ruan
+    name: volume
 
 autoscaling:
   enabled: false
