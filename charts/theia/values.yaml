@@ -90,7 +90,7 @@ volumes:
       claimName: theia
 
 volumeMounts:
-  - mountPath: /home/theia
+  - mountPath: /home/project
     name: theia
 
 autoscaling:
