@@ -41,8 +41,6 @@ service:
   port: 80
   targetPort: 3000
 
-
-
 livenessProbe:
  httpGet:
    path: /
@@ -84,16 +82,16 @@ resources: {}
 persistence:
   enabled: true
   size: 1Gi
-  name: volume
+  name: theia
 
 volumes:
-  - name: volume
+  - name: theia
     persistentVolumeClaim:
-      claimName: volume
+      claimName: theia
 
 volumeMounts:
   - mountPath: /home/theia
-    name: volume
+    name: theia
 
 autoscaling:
   enabled: false
